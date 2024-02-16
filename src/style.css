@@ -12,7 +12,9 @@ body {
     /* background-image: url(img/SVWRYWN2ERCZFCWQNAEVG3W74I.jpg); */
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -98,7 +100,6 @@ footer {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-
 }
 
 .main-index {
@@ -119,7 +120,14 @@ footer {
     height: 30rem;
     margin: auto;
     cursor: pointer;
-    transition: all ease 1s;
+    transition: all ease 3s;
+    animation: img-animation;
+    border: 6px solid red;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
 }
 
 .image-main:hover {
@@ -233,7 +241,6 @@ footer {
 }
 
 .wrapper {
-
     color: antiquewhite;
     text-align: center;
     display: grid;
@@ -322,8 +329,6 @@ footer {
     background-size: cover;
 }
 
-
-
 .icons-footer i {
     font-size: 1.9rem;
     padding: 10px;
@@ -333,6 +338,22 @@ footer {
 .icons-footer i:hover {
     scale: 1.20;
     transition: all 10ms;
+}
+
+@keyframes img-animation {
+
+    from {
+        border: 5px solid blue;
+    }
+
+    50% {
+        border: 5px solid red;
+    }
+
+    to {
+        border: 5px solid purple;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -366,9 +387,8 @@ footer {
 
     .main-index {
         margin-top: 5rem;
+        height: 100vh;
     }
-
-
 
     .main-error {
         flex-direction: column;
@@ -408,7 +428,6 @@ footer {
 @media (min-width: 769px) {
 
     body {
-
         display: grid;
         grid-template-areas:
             "h m "
@@ -427,7 +446,10 @@ footer {
     .navbar {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 
     .links {
@@ -438,6 +460,10 @@ footer {
 
     .btn-menu {
         margin: auto;
+    }
+
+    .main-index {
+        height: 100vh;
     }
 
     .wrapper {
