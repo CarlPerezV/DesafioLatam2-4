@@ -368,6 +368,7 @@ footer {
         display: flex;
         justify-content: space-between;
         padding: 0.7rem;
+        position: fixed;
     }
 
     .navbar .links,
@@ -383,6 +384,7 @@ footer {
         display: block;
         left: 2rem;
         width: unset;
+        position: fixed;
     }
 
     .main-index {
